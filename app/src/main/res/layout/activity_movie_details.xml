@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".DetailsPage">
+
+        <ImageView
+            android:id="@+id/coverImg"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:outlineSpotShadowColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coverImg"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="30sp"
+            android:text="Movie Title"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textColor="@color/lightgray"
+/>
+
+        <TextView
+            android:id="@+id/textviewrate"
+            android:layout_width="192dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:drawablePadding="2dp"
+            android:fontFamily="serif"
+            android:text="rating"
+            android:textColor="@color/teal_200"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.62"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview" />
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="87dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="19dp"
+            android:drawablePadding="2dp"
+            android:fontFamily="monospace"
+            android:text="Rating:"
+            android:textColor="@color/lightgray"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/releaseDate"
+            app:layout_constraintEnd_toStartOf="@+id/textviewrate"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview" />
+
+        <TextView
+            android:id="@+id/releaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:text="Release:"
+            android:textColor="@color/lightgray"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textviewrate" />
+
+        <TextView
+            android:id="@+id/dsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:text="About Movie:"
+            android:textColor="@color/lightgray"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/releaseDate" />
+
+        <TextView
+            android:id="@+id/descTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif"
+            android:padding="5dp"
+            android:text="description"
+            android:textColor="@color/lightgray"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dsc" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="date"
+            android:textSize="20sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/lightgray"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/releaseDate"
+            app:layout_constraintStart_toEndOf="@+id/releaseDate"
+            app:layout_constraintTop_toTopOf="@+id/releaseDate" />
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="156dp"
+            android:layout_height="164dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="poster"
+            android:outlineAmbientShadowColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/cast"
+            android:layout_width="178dp"
+            android:layout_height="235dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="200dp"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:text="cast"
+            android:textColor="@color/lightgray"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descTxt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
